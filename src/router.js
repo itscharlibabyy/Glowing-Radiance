@@ -12,6 +12,11 @@ import { handleBlacklist } from './routes/blacklist.js';
 export async function router(request, env, ctx, firebase) {
   const url = new URL(request.url);
 
+  console.log("Incoming request to /server", request.method, url)
+  console.log("Body:", await request.text())
+  console.log("Headers:", [...request.headers])
+
+
   // Normalize path to lowercase
   const path = url.pathname.toLowerCase();
 
