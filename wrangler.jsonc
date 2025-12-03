@@ -1,7 +1,7 @@
 {
   "name": "glowing-radiance-api",
   "main": "src/index.js",
-  "compatibility_date": "2026-01-01",
+  "compatibility_date": "2025-01-01",
   
   "vars": {
     "DS_API_KEY": "charli_pcm_gfoty_9Kj0uVx8tM4Hc1SgE6rW3QbZ2nP7fD5yLa",
