@@ -11,42 +11,43 @@ import { handleBlacklist } from './routes/blacklist.js';
 
 export async function router(request, env, ctx, firebase) {
   const url = new URL(request.url);
-  const path = url.pathname;
 
-  // Route matching
-  if (path === '/BannedPlayers2') {
+  // Normalize path to lowercase
+  const path = url.pathname.toLowerCase();
+
+  if (path === '/bannedplayers2') {
     return await handleBannedPlayers(request, env, ctx, firebase);
   }
 
-  if (path === '/CheckBan') {
+  if (path === '/checkban') {
     return await handleCheckBan(request, env, ctx, firebase);
   }
 
-  if (path === '/StaffData') {
+  if (path === '/staffdata') {
     return await handleStaffData(request, env, ctx, firebase);
   }
 
-  if (path === '/QualityData') {
+  if (path === '/qualitydata') {
     return await handleQualityData(request, env, ctx, firebase);
   }
 
-  if (path === '/Trained') {
+  if (path === '/trained') {
     return await handleTrained(request, env, ctx, firebase);
   }
 
-  if (path === '/Stars') {
+  if (path === '/stars') {
     return await handleStars(request, env, ctx, firebase);
   }
 
-  if (path === '/Wards') {
+  if (path === '/wards') {
     return await handleWards(request, env, ctx, firebase);
   }
 
-  if (path === '/Warnings') {
+  if (path === '/warnings') {
     return await handleWarnings(request, env, ctx, firebase);
   }
 
-  if (path === '/Blacklist') {
+  if (path === '/blacklist') {
     return await handleBlacklist(request, env, ctx, firebase);
   }
 
