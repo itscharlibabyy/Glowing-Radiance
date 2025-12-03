@@ -1,5 +1,11 @@
 {
-  "name": "glowing-radiance",
+  "name": "glowing-radiance-api",
   "main": "src/index.js",
-  "compatibility_date": "2025-11-28"
+  "compatibility_date": "2026-01-01",
+  
+  "vars": {
+    "DS_API_KEY": "charli_pcm_gfoty_9Kj0uVx8tM4Hc1SgE6rW3QbZ2nP7fD5yLa",
+    "FIREBASE_URL": "https://glowing-radiance-default-rtdb.firebaseio.com/",
+    "FIREBASE_SECRET": "UVTXUT8rFgdrSaGdbsRLyDmKvfpIOQ3Vx8C7Lx4v"
+  }
 }
