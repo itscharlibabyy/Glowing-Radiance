@@ -50,7 +50,6 @@ class Firebase {
     return await this.request('POST', key, data);
   }
 
-  // Helper: Check if a player is banned
   async isBanned(playerId) {
     const player = await this.get(`/bannedPlayers/${playerId}`);
     return player !== null;

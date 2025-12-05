@@ -20,11 +20,9 @@ export async function handleStaffData(request, env, ctx, firebase) {
 async function getStaffData(id, firebase) {
   try {
     if (id) {
-      // Get specific user
       const data = await firebase.get(`/staffData/${id}`);
       return jsonResponse({ id, data: data || { c: 0, d: 0, r: 0, s: 0 } });
     } else {
-      // Get all staff data
       const data = await firebase.get('/staffData');
       return jsonResponse({ data: data || {} });
     }

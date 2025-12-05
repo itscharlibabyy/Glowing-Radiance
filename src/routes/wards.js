@@ -23,7 +23,6 @@ async function getWards(wardId, firebase) {
       const ward = await firebase.get(`/wards/${wardId}`);
       return jsonResponse({ wardId, ward: ward || null });
     } else {
-      // Get active wards list
       const active = await firebase.get('/wards/active');
       const wards = {};
 
@@ -60,7 +59,6 @@ async function setWard(request, firebase) {
 
     await firebase.patch(`/wards/${id}`, wardData);
 
-    // Update active wards list
     const active = (await firebase.get('/wards/active')) || [];
     if (!active.includes(id)) {
       active.push(id);
@@ -80,8 +78,7 @@ async function deleteWard(wardId, firebase) {
     }
 
     await firebase.delete(`/wards/${wardId}`);
-
-    // Remove from active list
+    
     const active = (await firebase.get('/wards/active')) || [];
     const filtered = active.filter(id => id !== wardId);
     await firebase.put('/wards/active', filtered);

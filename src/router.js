@@ -16,8 +16,6 @@ export async function router(request, env, ctx, firebase) {
   console.log("Body:", await request.text())
   console.log("Headers:", [...request.headers])
 
-
-  // Normalize path to lowercase
   const path = url.pathname.toLowerCase();
 
   if (path === '/bannedplayers2') {
