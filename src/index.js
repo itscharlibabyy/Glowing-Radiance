@@ -1,25 +1,4 @@
-export default {
-  fetch(request) {
-    const url = new URL(request.url);
 
-    if (url.pathname === "/1189fb58638453b576ed5347ac1063a1.txt") {
-      return new Response(
-        "detectify",
-        {
-          headers: {
-            "content-type": "text/plain"
-          }
-        }
-      );
-    }
-
-    // normal site logic below
-    return new Response("OK");
-  }
-};
-
-
-/*
 import { router } from './router.js';
 import { corsHeaders } from './utils/cors.js';
 import { authenticate } from './middleware/auth.js';
@@ -52,4 +31,4 @@ export default {
       });
     }
   }
-}; */
+}; 
