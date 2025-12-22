@@ -1,3 +1,25 @@
+export default {
+  fetch(request) {
+    const url = new URL(request.url);
+
+    if (url.pathname === "/1189fb58638453b576ed5347ac1063a1.txt") {
+      return new Response(
+        "detectify",
+        {
+          headers: {
+            "content-type": "text/plain"
+          }
+        }
+      );
+    }
+
+    // normal site logic below
+    return new Response("OK");
+  }
+};
+
+
+/*
 import { corsHeaders } from './utils/cors.js';
 import { handleBannedPlayers } from './routes/banned-players.js';
 import { handleCheckBan } from './routes/check-ban.js';
@@ -60,3 +82,4 @@ export async function router(request, env, ctx, firebase) {
     headers: { ...corsHeaders, 'Content-Type': 'application/json' }
   });
 }
+*/
